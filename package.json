@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
-    "watson-personality": "file:watson-personality"
+    "watson-personality": "^1.0.2"
   }
 }

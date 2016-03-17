@@ -8,9 +8,8 @@ app.get('/', function(request, response) {
 
   personality('@billyzacsmith')
     .then(function(personalityProfile) {
-      console.log(personalityProfile.traits)
-      console.log(personalityProfile.needs)
-      response.send(personalityProfile.needs)
+      console.log(personalityProfile)
+      response.send(personalityProfile)
     })
     .catch(function(error) {
       console.log(error)
