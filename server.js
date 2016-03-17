@@ -4,16 +4,20 @@ var personality = require('watson-personality')
 var app = Express()
 var PORT = process.env.PORT || 3000
 
-app.get('/', function(request, response) {
+app.get('/:twitter_user', function(request, response) {
+  console.log('Looking up personality for:', request.params.twitter_user);
 
-  personality('@billyzacsmith')
+  personality(request.params.twitter_user)
     .then(function(personalityProfile) {
-      console.log(personalityProfile)
       response.send(personalityProfile)
     })
     .catch(function(error) {
       console.log(error)
     })
+})
+
+app.get('/', function(request, response) {
+  response.send('ok')
 })
 
 app.listen(PORT, function() {
