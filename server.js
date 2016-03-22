@@ -1,8 +1,11 @@
 var Express = require('express')
 var personality = require('watson-personality')
+var cors = require('cors')
 
 var app = Express()
 var PORT = process.env.PORT || 3000
+
+app.use(cors())
 
 app.get('/:twitter_user', function(request, response) {
   console.log('Looking up personality for:', request.params.twitter_user);
