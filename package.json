@@ -12,6 +12,6 @@
   "dependencies": {
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "watson-personality": "^1.0.2"
+    "watson-personality": "^1.0.3"
   }
 }
